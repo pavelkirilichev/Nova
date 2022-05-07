@@ -36,6 +36,12 @@ function Home() {
           </ul>
         </div>
       </header>
+      <main
+        className="main"
+        onClick={() => {
+          setPoms("none");
+        }}
+      ></main>
     </div>
   );
 }
