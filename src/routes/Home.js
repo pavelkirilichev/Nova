@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Slider from "../Slider";
 
 function Home() {
   const [poms, setPoms] = useState("none");
@@ -41,7 +42,13 @@ function Home() {
         onClick={() => {
           setPoms("none");
         }}
-      ></main>
+      >
+        <div className="title__div">
+          <span className="title__1">NOVAMIND</span>
+          <span className="title__2">NEW PROJECT, NEW PEOPLE, NEW MIND</span>
+        </div>
+        <Slider />
+      </main>
     </div>
   );
 }
