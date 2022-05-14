@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 const text_arr = [
   {
@@ -41,30 +42,31 @@ const img_arr = [
 function Slider() {
   const [text, setText] = useState(text_arr[1]);
   const [img, setImg] = useState(img_arr[1]);
+  const [opacity, setOpacity] = useState(
+    "slider__section-center-active slider__text-active"
+  );
 
   let side_index = img.side;
 
   return (
     <div className="slider">
       <div className="slider__main">
-        {img.id > 0 ? (
-          <div
-            className="slider__side-left"
-            onClick={() => {
-              let index = text.id - 1;
-              setText(text_arr[index]);
-              setImg(img_arr[index]);
-            }}
-          >
-            <img src="./img/slider_arrow-left.png" className="slider__arrow" />
-          </div>
-        ) : (
-          <div
-            className="slider__side-right"
-            style={{ visibility: "hidden" }}
-          ></div>
-        )}
-        <div className="slider__section-center">
+        <div
+          className="slider__side-left"
+          onClick={() => {
+            setOpacity("");
+            let index = text.id - 1;
+            if (index === -1) index = 2;
+            setText(text_arr[index]);
+            setImg(img_arr[index]);
+            setInterval(() => {
+              setOpacity("slider__section-center-active slider__text-active");
+            }, 1);
+          }}
+        >
+          <img src="./img/slider_arrow-left.png" className="slider__arrow" />
+        </div>
+        <div className={"slider__section-center " + opacity}>
           <img
             src={img_arr[side_index[0]].src}
             className={img_arr[side_index[0]] + " slider_img-side"}
@@ -75,25 +77,23 @@ function Slider() {
             className={img_arr[side_index[1]] + " slider_img-side"}
           />
         </div>
-        {img.id < 2 ? (
-          <div
-            className="slider__side-right"
-            onClick={() => {
-              let index = text.id + 1;
-              setText(text_arr[index]);
-              setImg(img_arr[index]);
-            }}
-          >
-            <img src="./img/slider_arrow-left.png" className="slider__arrow" />
-          </div>
-        ) : (
-          <div
-            className="slider__side-right"
-            style={{ visibility: "hidden" }}
-          ></div>
-        )}
+        <div
+          className="slider__side-right"
+          onClick={() => {
+            setOpacity("");
+            let index = text.id + 1;
+            if (index === 3) index = 0;
+            setText(text_arr[index]);
+            setImg(img_arr[index]);
+            setInterval(() => {
+              setOpacity("slider__section-center-active slider__text-active");
+            }, 1);
+          }}
+        >
+          <img src="./img/slider_arrow-left.png" className="slider__arrow" />
+        </div>
       </div>
-      <div className="slider__text">
+      <div className={"slider__text " + opacity}>
         <span className="slider__text-title">{text.title}</span>
         <p className="slider__text-main">{text.text}</p>
       </div>

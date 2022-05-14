@@ -1,0 +1,94 @@
+@font-face {
+	font-family: 'lota_bold'; 
+	src: url(../fonts/lota_bold.otf); 
+}
+@font-face {
+	font-family: 'lota_black'; 
+	src: url(../fonts/lota_black.otf); 
+}
+@font-face {
+	font-family: 'lota_white'; 
+	src: url(../fonts/lota_white.otf); 
+}
+
+.container {
+    width: 1046px;
+    margin: 0 auto;
+}
+.phase__title {
+    display: inline-flex;
+    flex-direction: column;
+}
+.phase__title-1 {
+    margin-left: 5px;
+    align-self: center;
+    width: 118px;
+}
+.phase__title-2 {
+    margin-top: -14.5px;
+    font-family: 'lota_bold';
+    font-weight: 900;
+    font-size: 44.118px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+.phase__main {
+    margin-top: 35px;
+}
+.phase__main__item {
+    display: flex;
+}
+.item__text {
+    margin-left: 18px;
+    width: 975px;
+}
+.item__circle {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    background-image: url("../img/circle.png");
+}
+.roadmap_check_mark img {
+    opacity: 0;
+}
+.roadmap_check_mark:hover img {
+    opacity: 1;
+}
+
+.item__text__title {
+    display: flex;
+}
+.item__text__title img {
+    width: 14px;
+    height: 22px;
+}
+.item__text__title p {
+    margin-top: -4px;
+    margin-left: 7px;
+    font-family: "lota_white";
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+.item__text-inner {
+    font-weight: 300;
+    font-size: 17px;
+    font-family: "lota_white";
+    color: #fff;
+}
+
+.roadmap_line {
+    margin-top: 5px;
+    margin-left: 24px;
+    width: 4px;
+    height: 45px;
+}
+
+.phase-2 {
+    margin-top: 62px;
+    padding-bottom: 50px;
+}
+

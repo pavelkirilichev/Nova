@@ -17,6 +17,9 @@
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration:none;
+}
 body {
     background: #06070C;
     height: 100vh;
@@ -89,6 +92,9 @@ body {
     color: #fff;
     font-size: 14px;
 }
+.pull-out__item a {
+    color: #fff;
+}
 .pull-out__item:hover {
     background: #1B1D2C;
 }
@@ -112,6 +118,8 @@ body {
     font-family: "lota_bold";
 }
 
+
+
 .slider {
     margin-top: 50px;
 }
@@ -125,6 +133,7 @@ body {
 }
 
 .slider__section-center {
+    opacity: 0.01;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -132,6 +141,15 @@ body {
     width: 953px;
     height: 400px;
 }
+.slider__section-center-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
 .slider_img-center {
     z-index: 2;
     position: absolute;
@@ -176,7 +194,11 @@ body {
     margin: 12px auto;
     width: 762px;
     height: 300px;
-
+    opacity: 0.01;
+}
+.slider__text-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
 }
 .slider__text-title {
     color: #000;

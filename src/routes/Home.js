@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Slider from "../Slider";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [poms, setPoms] = useState("none");
@@ -11,7 +12,14 @@ function Home() {
           <div className="nav-left">
             <img src="./img/logo.png" className="logo" />
             <ul className="nav__list">
-              <li className="list__item bg-light">Home</li>
+              {
+                <Link className="SectionNavigation-Item Section" to="/">
+                  <li className="list__item bg-light">
+                    <span className="Section-Title">Home</span>
+                  </li>
+                </Link>
+              }
+
               <li className="list__item">Whitepapper</li>
               <li className="list__item">Marketplace</li>
               <li className="list__item">FAQ</li>
@@ -30,7 +38,15 @@ function Home() {
           <ul className="pull-out__list">
             <li className="pull-out__item">Stacking</li>
             <li className="pull-out__item">Tokenomics</li>
-            <li className="pull-out__item">Roadmap</li>
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/roadmap">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Roadmap</span>
+                </li>
+              </Link>
+            }
+
             <li className="pull-out__item">Social</li>
             <li className="pull-out__item">Mint</li>
             <li className="pull-out__item">Sneak-peaks</li>
