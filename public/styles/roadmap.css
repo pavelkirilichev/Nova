@@ -70,7 +70,7 @@
     margin-left: 7px;
     font-family: "lota_white";
     font-weight: 700;
-    font-size: 24px;
+    font-size: 23px;
     color: #fff;
 }
 .item__text-inner {
@@ -89,6 +89,6 @@
 
 .phase-2 {
     margin-top: 62px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 

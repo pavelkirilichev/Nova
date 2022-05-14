@@ -1,8 +1,86 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Roadmap() {
   const [poms, setPoms] = useState("none");
+  const phase_1 = [
+    {
+      id: 0,
+      title: "Discord Tracking bot",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL.",
+      type: 1,
+    },
+    {
+      id: 1,
+      title: "Tokenomics",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 1,
+    },
+    {
+      id: 2,
+      title: "Website",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 1,
+    },
+    {
+      id: 3,
+      title: "Marketplace",
+      text: "- Mint: Mint 1618 Electric Sheep.",
+      type: 1,
+    },
+    {
+      id: 4,
+      title: "Whitepaper",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FLP.",
+      type: 0,
+    },
+    {
+      id: 5,
+      title: "Minders’ mint",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FLP.",
+      type: 0,
+    },
+  ];
+
+  const phase_2 = [
+    {
+      id: 0,
+      title: "Listing on ME",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL.",
+      type: 0,
+    },
+    {
+      id: 1,
+      title: "Solana mint utilities",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 0,
+    },
+    {
+      id: 2,
+      title: "Discord utilities",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 0,
+    },
+    {
+      id: 3,
+      title: "Token liquidity",
+      text: "- Mint: Mint 1618 Electric Sheep.",
+      type: 0,
+    },
+    {
+      id: 4,
+      title: "Staking",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FLP.",
+      type: 0,
+    },
+    {
+      id: 5,
+      title: "Roadmap v.2",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FLP.",
+      type: 0,
+    },
+  ];
 
   return (
     <div className="wrapper">
@@ -21,7 +99,13 @@ function Roadmap() {
 
               <li className="list__item">Whitepapper</li>
               <li className="list__item">Marketplace</li>
-              <li className="list__item">FAQ</li>
+              {
+                <Link className="SectionNavigation-Item Section" to="/faq">
+                  <li className="list__item">
+                    <span className="Section-Title">FAQ</span>
+                  </li>
+                </Link>
+              }
             </ul>
           </div>
           <div
@@ -60,109 +144,51 @@ function Roadmap() {
               <span className="phase__title-2">PRE-MINT</span>
             </div>
             <div className="phase__main">
-              <div className="phase__main__item">
-                <div className="item__circle">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Discord Tracking bot</p>
+              {phase_1.map((item) => {
+                let circle_class;
+                if (item.type == 0) circle_class = " roadmap_check_mark";
+                else circle_class = "";
+
+                let img_src;
+                let flag = 0;
+                let index = item.id;
+                if (phase_1[index] != phase_1[phase_1.length - 1]) {
+                  index += 1;
+                } else {
+                  flag = 1;
+                }
+
+                if (phase_1[index].type == 0) {
+                  img_src = "roadmap_line_punct";
+                } else {
+                  img_src = "roadmap_line";
+                }
+
+                if (flag == 1) {
+                  img_src = "";
+                }
+
+                return (
+                  <div className="phase__item">
+                    <div className="phase__main__item">
+                      <div className={"item__circle" + circle_class}>
+                        <img src="./img/check_mark.png" />
+                      </div>
+                      <div className="item__text">
+                        <div className="item__text__title">
+                          <img src="./img/roadmap_arrow.png" />
+                          <p>{item.title}</p>
+                        </div>
+                        <p className="item__text-inner">{item.text}</p>
+                      </div>
+                    </div>
+                    <img
+                      src={"./img/" + img_src + ".png"}
+                      className="roadmap_line"
+                    />
                   </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FL.
-                  </p>
-                </div>
-              </div>
-              <img src="./img/roadmap_line.png" className="roadmap_line" />
-              <div className="phase__main__item">
-                <div className="item__circle">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Tokenomics</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep.
-                  </p>
-                </div>
-              </div>
-              <img src="./img/roadmap_line.png" className="roadmap_line" />
-              <div className="phase__main__item">
-                <div className="item__circle">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Website</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep.
-                  </p>
-                </div>
-              </div>
-              <img src="./img/roadmap_line.png" className="roadmap_line" />
-              <div className="phase__main__item">
-                <div className="item__circle">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Marketplace</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Whitepaper</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FLP.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Minders’ mint</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FLP.
-                  </p>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
           <div className="phase phase-2">
@@ -171,118 +197,51 @@ function Roadmap() {
               <span className="phase__title-2">TOKEN ERA</span>
             </div>
             <div className="phase__main">
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Listing on ME</p>
+              {phase_2.map((item) => {
+                let circle_class;
+                if (item.type == 0) circle_class = " roadmap_check_mark";
+                else circle_class = "";
+
+                let img_src;
+                let flag = 0;
+                let index = item.id;
+                if (phase_2[index] != phase_2[phase_2.length - 1]) {
+                  index += 1;
+                } else {
+                  flag = 1;
+                }
+
+                if (phase_2[index].type == 0) {
+                  img_src = "roadmap_line_punct";
+                } else {
+                  img_src = "roadmap_line";
+                }
+
+                if (flag == 1) {
+                  img_src = "";
+                }
+
+                return (
+                  <div className="phase__item">
+                    <div className="phase__main__item">
+                      <div className={"item__circle" + circle_class}>
+                        <img src="./img/check_mark.png" />
+                      </div>
+                      <div className="item__text">
+                        <div className="item__text__title">
+                          <img src="./img/roadmap_arrow.png" />
+                          <p>{item.title}</p>
+                        </div>
+                        <p className="item__text-inner">{item.text}</p>
+                      </div>
+                    </div>
+                    <img
+                      src={"./img/" + img_src + ".png"}
+                      className="roadmap_line"
+                    />
                   </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FL.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Solana mint utilities</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Discord utilities</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Token liquidity</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Staking</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FLP.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="./img/roadmap_line_punct.png"
-                className="roadmap_line"
-              />
-              <div className="phase__main__item">
-                <div className="item__circle roadmap_check_mark">
-                  <img src="./img/check_mark.png" />
-                </div>
-                <div className="item__text">
-                  <div className="item__text__title">
-                    <img src="./img/roadmap_arrow.png" />
-                    <p>Roadmap v.2</p>
-                  </div>
-                  <p className="item__text-inner">
-                    - Mint: Mint 1618 Electric Sheep. To protect the mental
-                    health of the sheep, we create a new launch style called
-                    Double FLP.
-                  </p>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

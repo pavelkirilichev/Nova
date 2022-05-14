@@ -24,7 +24,7 @@ const img_arr = [
     src: "./img/slider_img_1.png",
     class: "slider_img-1",
     id: 0,
-    side: [1, 2],
+    side: [2, 1],
   },
   {
     src: "./img/slider_img_2.png",

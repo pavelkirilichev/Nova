@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'lota_bold'; 
+	src: url(../fonts/lota_bold.otf); 
+}
+@font-face {
+	font-family: 'lota_black'; 
+	src: url(../fonts/lota_black.otf); 
+}
+@font-face {
+	font-family: 'lota_white'; 
+	src: url(../fonts/lota_white.otf); 
+}
+
+.container {
+    width: 1061px;
+    margin: 33px auto;
+}
+.faq__item__title {
+    font-family: 'lota_white';
+    font-weight: 700;
+    font-size: 23px;
+    color: #fff;
+}
+.faq__item__text {
+    margin-top: 7px;
+    font-family: 'lota_white';
+    font-weight: 300;
+    font-size: 17px;
+    color: #fff;
+}
+.faq__item {
+    margin-bottom: 20px;
+}

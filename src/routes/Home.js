@@ -22,7 +22,13 @@ function Home() {
 
               <li className="list__item">Whitepapper</li>
               <li className="list__item">Marketplace</li>
-              <li className="list__item">FAQ</li>
+              {
+                <Link className="SectionNavigation-Item Section" to="/faq">
+                  <li className="list__item">
+                    <span className="Section-Title">FAQ</span>
+                  </li>
+                </Link>
+              }
             </ul>
           </div>
           <div
