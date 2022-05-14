@@ -36,7 +36,7 @@ const img_arr = [
     src: "./img/slider_img_3.png",
     class: "slider_img-3",
     id: 2,
-    side: [0, 1],
+    side: [1, 0],
   },
 ];
 function Slider() {
