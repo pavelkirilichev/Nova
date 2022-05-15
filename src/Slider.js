@@ -64,7 +64,7 @@ function Slider() {
             }, 1);
           }}
         >
-          <img src="./img/slider_arrow-left.png" className="slider__arrow" />
+          <div className="slider__arrow"></div>
         </div>
         <div className={"slider__section-center " + opacity}>
           <img
@@ -90,7 +90,7 @@ function Slider() {
             }, 1);
           }}
         >
-          <img src="./img/slider_arrow-left.png" className="slider__arrow" />
+          <div className="slider__arrow"></div>
         </div>
       </div>
       <div className={"slider__text " + opacity}>

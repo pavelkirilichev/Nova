@@ -24,6 +24,13 @@ body {
     background: #06070C;
     height: 100vh;
 }
+.main {
+    opacity: 0;
+}
+.main-opacity {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
 .nav {
     width: 100%;
     height: 50px;
@@ -186,6 +193,7 @@ body {
     background-image: url(../img/slider_btn-left.png);
 }
 .slider__arrow {
+    background-image: url("../img/slider_arrow-left.png");
     height: 27.61px;
     width: 17px;
 }

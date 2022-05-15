@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [poms, setPoms] = useState("none");
+  const [main_opacity, setMainOpacity] = useState("");
+
+  setInterval(() => {
+    setMainOpacity(" main-opacity");
+  }, 1);
 
   return (
     <div className="wrapper">
@@ -43,7 +48,13 @@ function Home() {
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
             <li className="pull-out__item">Stacking</li>
-            <li className="pull-out__item">Tokenomics</li>
+            {
+              <Link className="SectionNavigation-Item Section" to="/tokenomics">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Tokenomics</span>
+                </li>
+              </Link>
+            }
 
             {
               <Link className="SectionNavigation-Item Section" to="/roadmap">
@@ -60,7 +71,7 @@ function Home() {
         </div>
       </header>
       <main
-        className="main"
+        className={"main" + main_opacity}
         onClick={() => {
           setPoms("none");
         }}

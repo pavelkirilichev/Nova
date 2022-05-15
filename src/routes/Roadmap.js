@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 
 function Roadmap() {
   const [poms, setPoms] = useState("none");
+
+  const [main_opacity, setMainOpacity] = useState("");
+
+  setInterval(() => {
+    setMainOpacity(" main-opacity");
+  }, 1);
+
   const phase_1 = [
     {
       id: 0,
@@ -120,7 +127,13 @@ function Roadmap() {
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
             <li className="pull-out__item">Stacking</li>
-            <li className="pull-out__item">Tokenomics</li>
+            {
+              <Link className="SectionNavigation-Item Section" to="/tokenomics">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Tokenomics</span>
+                </li>
+              </Link>
+            }
             <li className="pull-out__item">Roadmap</li>
             <li className="pull-out__item">Social</li>
             <li className="pull-out__item">Mint</li>
@@ -129,7 +142,7 @@ function Roadmap() {
         </div>
       </header>
       <main
-        className="main"
+        className={"main" + main_opacity}
         onClick={() => {
           setPoms("none");
         }}
