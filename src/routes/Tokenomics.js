@@ -75,59 +75,68 @@ function Tokenomics() {
         </div>
         <div className="container_token">
           <div className="puncts">
-            <div className="punct">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img
-                  src="./img/LIQUIDITY.png"
-                  className="punct__img liquidity"
-                />
-                <span className="punct__text__inner">5000000</span>
+            <div className="puncts_left">
+              <div className="punct">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img
+                    src="./img/LIQUIDITY.png"
+                    className="punct__img liquidity"
+                  />
+                  <span className="punct__text__inner">5000000</span>
+                </div>
+              </div>
+              <div className="punct">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img
+                    src="./img/STACKING.png"
+                    className="punct__img stacking"
+                  />
+                  <span className="punct__text__inner">1750000</span>
+                </div>
+              </div>
+              <div className="punct">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img src="./img/TEAM.png" className="punct__img team" />
+                  <span className="punct__text__inner">1000000</span>
+                </div>
+              </div>
+              <div className="punct">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img src="./img/LOCK. 2.png" className="punct__img lock_2" />
+                  <span className="punct__text__inner">1000000</span>
+                </div>
               </div>
             </div>
-            <div className="punct">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img src="./img/RESERVE.png" className="punct__img reserve" />
-                <span className="punct__text__inner">400000</span>
+            <div className="puncts_right">
+              <div className="punct">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img src="./img/RESERVE.png" className="punct__img reserve" />
+                  <span className="punct__text__inner">400000</span>
+                </div>
               </div>
-            </div>
-            <div className="punct">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img src="./img/STACKING.png" className="punct__img stacking" />
-                <span className="punct__text__inner">1750000</span>
+
+              <div className="punct liquidity_pool_div">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img
+                    src="./img/LIQUIDITY POOL.png"
+                    className="punct__img liquidity_pool"
+                  />
+                  <span className="punct__text__inner">350000</span>
+                </div>
               </div>
-            </div>
-            <div className="punct liquidity_pool_div">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img
-                  src="./img/LIQUIDITY POOL.png"
-                  className="punct__img liquidity_pool"
-                />
-                <span className="punct__text__inner">350000</span>
-              </div>
-            </div>
-            <div className="punct">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img src="./img/TEAM.png" className="punct__img team" />
-                <span className="punct__text__inner">1000000</span>
-              </div>
-            </div>
-            <div className="punct lock_3_div">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img src="./img/LOCK. 3.png" className="punct__img lock_3" />
-                <span className="punct__text__inner">500000</span>
-              </div>
-            </div>
-            <div className="punct">
-              <img src="./img/roadmap_line.png" className="line" />
-              <div className="punct__text">
-                <img src="./img/LOCK. 2.png" className="punct__img lock_2" />
-                <span className="punct__text__inner">1000000</span>
+
+              <div className="punct lock_3_div">
+                <img src="./img/roadmap_line.png" className="line" />
+                <div className="punct__text">
+                  <img src="./img/LOCK. 3.png" className="punct__img lock_3" />
+                  <span className="punct__text__inner">500000</span>
+                </div>
               </div>
             </div>
           </div>
