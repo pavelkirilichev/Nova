@@ -1,8 +1,7 @@
 import { useState } from "react";
-import Slider from "../Slider";
 import { Link } from "react-router-dom";
 
-function Home() {
+function ComingSoon() {
   const [poms, setPoms] = useState("none");
   const [burger_active, setBurgerActive] = useState("");
   const [main_opacity, setMainOpacity] = useState("");
@@ -111,13 +110,11 @@ function Home() {
         }}
       >
         <div className="title__div">
-          <span className="title__1">NOVAMIND</span>
-          <span className="title__2">NEW PROJECT, NEW PEOPLE, NEW MIND</span>
+          <span className="title__1 coming_soon">COMING SOON</span>
         </div>
-        <Slider />
       </main>
     </div>
   );
 }
 
-export default Home;
+export default ComingSoon;

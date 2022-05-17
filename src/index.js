@@ -1,5 +1,6 @@
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ComingSoon from "./routes/ComingSoon";
 import FAQ from "./routes/FAQ";
 import Home from "./routes/Home";
 import Roadmap from "./routes/Roadmap";
@@ -13,6 +14,7 @@ render(
       <Route path="/roadmap" element={<Roadmap />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/tokenomics" element={<Tokenomics />} />
+      <Route path="/comingsoon" element={<ComingSoon />} />
     </Routes>
   </BrowserRouter>,
   rootElement

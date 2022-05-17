@@ -49,10 +49,14 @@
     font-weight: 900;
 }
 .token {
+    opacity: 0;
     width: 418px;
     height: 418px;
 }
-
+.token-active {
+    opacity: 1;
+    transition: opacity 1.4s;
+}
 .puncts_right {
     margin-left: 70px;
 }

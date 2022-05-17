@@ -3,12 +3,22 @@ import { Link } from "react-router-dom";
 
 function Tokenomics() {
   const [poms, setPoms] = useState("none");
-
+  const [burger_active, setBurgerActive] = useState("");
   const [main_opacity, setMainOpacity] = useState("");
+  const [tokenIndex, SetToken] = useState("0");
+  const [tokenActive, SetTokenActive] = useState(" token-active");
 
   setInterval(() => {
     setMainOpacity(" main-opacity");
   }, 1);
+
+  function tokenUpdate(n) {
+    SetTokenActive("");
+    setTimeout(() => {
+      SetTokenActive(" token-active");
+    }, 50);
+    SetToken(n);
+  }
 
   return (
     <div className="wrapper">
@@ -25,8 +35,28 @@ function Tokenomics() {
                 </Link>
               }
 
-              <li className="list__item">Whitepapper</li>
-              <li className="list__item">Marketplace</li>
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item bg-light">
+                    <span className="Section-Title">Whitepapper</span>
+                  </li>
+                </Link>
+              }
+
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item bg-light">
+                    <span className="Section-Title">Marketplace</span>
+                  </li>
+                </Link>
+              }
+
               {
                 <Link className="SectionNavigation-Item Section" to="/faq">
                   <li className="list__item">
@@ -37,9 +67,10 @@ function Tokenomics() {
             </ul>
           </div>
           <div
-            className="menu-burger"
+            className={"menu-burger" + burger_active}
             onClick={() => {
               setPoms(poms === "none" ? "block" : "none");
+              setBurgerActive(" menu-burger_active");
             }}
           >
             <img src="./img/burger.png" />
@@ -47,20 +78,37 @@ function Tokenomics() {
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
-            <li className="pull-out__item">Stacking</li>
-            <li className="pull-out__item">Tokenomics</li>
-
             {
-              <Link className="SectionNavigation-Item Section" to="/roadmap">
+              <Link className="SectionNavigation-Item Section" to="/tokenomics">
                 <li className="pull-out__item">
-                  <span className="Section-Title">Roadmap</span>
+                  <span className="Section-Title">Tokenomics</span>
                 </li>
               </Link>
             }
 
-            <li className="pull-out__item">Social</li>
-            <li className="pull-out__item">Mint</li>
-            <li className="pull-out__item">Sneak-peaks</li>
+            {
+              <Link className="SectionNavigation-Item Section" to="/roadmap">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Whitepaper</span>
+                </li>
+              </Link>
+            }
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Mint</span>
+                </li>
+              </Link>
+            }
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Staking</span>
+                </li>
+              </Link>
+            }
           </ul>
         </div>
       </header>
@@ -68,6 +116,7 @@ function Tokenomics() {
         className={"main" + main_opacity}
         onClick={() => {
           setPoms("none");
+          setBurgerActive("");
         }}
       >
         <div className="title__div">
@@ -76,7 +125,12 @@ function Tokenomics() {
         <div className="container_token">
           <div className="puncts">
             <div className="puncts_left">
-              <div className="punct">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("100");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img
@@ -86,7 +140,12 @@ function Tokenomics() {
                   <span className="punct__text__inner">5000000</span>
                 </div>
               </div>
-              <div className="punct">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("35");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img
@@ -96,14 +155,24 @@ function Tokenomics() {
                   <span className="punct__text__inner">1750000</span>
                 </div>
               </div>
-              <div className="punct">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("20");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img src="./img/TEAM.png" className="punct__img team" />
                   <span className="punct__text__inner">1000000</span>
                 </div>
               </div>
-              <div className="punct">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("20");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img src="./img/LOCK. 2.png" className="punct__img lock_2" />
@@ -112,7 +181,12 @@ function Tokenomics() {
               </div>
             </div>
             <div className="puncts_right">
-              <div className="punct">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("8");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img src="./img/RESERVE.png" className="punct__img reserve" />
@@ -120,7 +194,12 @@ function Tokenomics() {
                 </div>
               </div>
 
-              <div className="punct liquidity_pool_div">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("7");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img
@@ -131,7 +210,12 @@ function Tokenomics() {
                 </div>
               </div>
 
-              <div className="punct lock_3_div">
+              <div
+                className="punct"
+                onMouseEnter={() => {
+                  tokenUpdate("10");
+                }}
+              >
                 <img src="./img/roadmap_line.png" className="line" />
                 <div className="punct__text">
                   <img src="./img/LOCK. 3.png" className="punct__img lock_3" />
@@ -140,7 +224,10 @@ function Tokenomics() {
               </div>
             </div>
           </div>
-          <img src="./img/token.png" className="token" />
+          <img
+            src={"./img/token_" + tokenIndex + ".png"}
+            className={"token" + tokenActive}
+          />
         </div>
       </main>
     </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function FAQ() {
   const [poms, setPoms] = useState("none");
-
+  const [burger_active, setBurgerActive] = useState("");
   const [main_opacity, setMainOpacity] = useState("");
 
   setInterval(() => {
@@ -25,8 +25,28 @@ function FAQ() {
                 </Link>
               }
 
-              <li className="list__item">Whitepapper</li>
-              <li className="list__item">Marketplace</li>
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item">
+                    <span className="Section-Title">Whitepapper</span>
+                  </li>
+                </Link>
+              }
+
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item">
+                    <span className="Section-Title">Marketplace</span>
+                  </li>
+                </Link>
+              }
+
               {
                 <Link className="SectionNavigation-Item Section" to="/faq">
                   <li className="list__item bg-light">
@@ -37,9 +57,10 @@ function FAQ() {
             </ul>
           </div>
           <div
-            className="menu-burger"
+            className={"menu-burger" + burger_active}
             onClick={() => {
               setPoms(poms === "none" ? "block" : "none");
+              setBurgerActive(" menu-burger_active");
             }}
           >
             <img src="./img/burger.png" />
@@ -47,7 +68,6 @@ function FAQ() {
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
-            <li className="pull-out__item">Stacking</li>
             {
               <Link className="SectionNavigation-Item Section" to="/tokenomics">
                 <li className="pull-out__item">
@@ -59,14 +79,26 @@ function FAQ() {
             {
               <Link className="SectionNavigation-Item Section" to="/roadmap">
                 <li className="pull-out__item">
-                  <span className="Section-Title">Roadmap</span>
+                  <span className="Section-Title">Whitepaper</span>
                 </li>
               </Link>
             }
 
-            <li className="pull-out__item">Social</li>
-            <li className="pull-out__item">Mint</li>
-            <li className="pull-out__item">Sneak-peaks</li>
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Mint</span>
+                </li>
+              </Link>
+            }
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Staking</span>
+                </li>
+              </Link>
+            }
           </ul>
         </div>
       </header>
@@ -74,6 +106,7 @@ function FAQ() {
         className={"main" + main_opacity}
         onClick={() => {
           setPoms("none");
+          setBurgerActive("");
         }}
       >
         <div className="title__div">

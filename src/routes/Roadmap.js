@@ -1,11 +1,13 @@
 import { type } from "@testing-library/user-event/dist/type";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
 function Roadmap() {
   const [poms, setPoms] = useState("none");
 
   const [main_opacity, setMainOpacity] = useState("");
+  const [burger_active, setBurgerActive] = useState("");
 
   setInterval(() => {
     setMainOpacity(" main-opacity");
@@ -104,8 +106,28 @@ function Roadmap() {
                 </Link>
               }
 
-              <li className="list__item">Whitepapper</li>
-              <li className="list__item">Marketplace</li>
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item">
+                    <span className="Section-Title">Whitepapper</span>
+                  </li>
+                </Link>
+              }
+
+              {
+                <Link
+                  className="SectionNavigation-Item Section"
+                  to="/comingsoon"
+                >
+                  <li className="list__item">
+                    <span className="Section-Title">Marketplace</span>
+                  </li>
+                </Link>
+              }
+
               {
                 <Link className="SectionNavigation-Item Section" to="/faq">
                   <li className="list__item">
@@ -116,9 +138,10 @@ function Roadmap() {
             </ul>
           </div>
           <div
-            className="menu-burger"
+            className={"menu-burger" + burger_active}
             onClick={() => {
               setPoms(poms === "none" ? "block" : "none");
+              setBurgerActive(" menu-burger_active");
             }}
           >
             <img src="./img/burger.png" />
@@ -126,7 +149,6 @@ function Roadmap() {
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
-            <li className="pull-out__item">Stacking</li>
             {
               <Link className="SectionNavigation-Item Section" to="/tokenomics">
                 <li className="pull-out__item">
@@ -134,10 +156,30 @@ function Roadmap() {
                 </li>
               </Link>
             }
-            <li className="pull-out__item">Roadmap</li>
-            <li className="pull-out__item">Social</li>
-            <li className="pull-out__item">Mint</li>
-            <li className="pull-out__item">Sneak-peaks</li>
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/roadmap">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Whitepaper</span>
+                </li>
+              </Link>
+            }
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Mint</span>
+                </li>
+              </Link>
+            }
+
+            {
+              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+                <li className="pull-out__item">
+                  <span className="Section-Title">Staking</span>
+                </li>
+              </Link>
+            }
           </ul>
         </div>
       </header>
@@ -145,6 +187,7 @@ function Roadmap() {
         className={"main" + main_opacity}
         onClick={() => {
           setPoms("none");
+          setBurgerActive("");
         }}
       >
         <div className="title__div">
