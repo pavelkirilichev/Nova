@@ -40,7 +40,7 @@ function Tokenomics() {
                   className="SectionNavigation-Item Section"
                   to="/comingsoon"
                 >
-                  <li className="list__item bg-light">
+                  <li className="list__item">
                     <span className="Section-Title">Whitepapper</span>
                   </li>
                 </Link>
@@ -51,7 +51,7 @@ function Tokenomics() {
                   className="SectionNavigation-Item Section"
                   to="/comingsoon"
                 >
-                  <li className="list__item bg-light">
+                  <li className="list__item">
                     <span className="Section-Title">Marketplace</span>
                   </li>
                 </Link>
