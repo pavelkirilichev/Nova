@@ -22,7 +22,19 @@ function Roadmap() {
     },
     {
       id: 1,
+      title: "Socials",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 1,
+    },
+    {
+      id: 1,
       title: "Tokenomics",
+      text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
+      type: 1,
+    },
+    {
+      id: 1,
+      title: "Roadmap",
       text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep.",
       type: 1,
     },
@@ -36,7 +48,7 @@ function Roadmap() {
       id: 3,
       title: "Marketplace",
       text: "- Mint: Mint 1618 Electric Sheep.",
-      type: 1,
+      type: 0,
     },
     {
       id: 4,
@@ -100,7 +112,7 @@ function Roadmap() {
             <ul className="nav__list">
               {
                 <Link className="SectionNavigation-Item Section" to="/">
-                  <li className="list__item bg-light">
+                  <li className="list__item">
                     <span className="Section-Title">Home</span>
                   </li>
                 </Link>
@@ -109,7 +121,7 @@ function Roadmap() {
               {
                 <Link
                   className="SectionNavigation-Item Section"
-                  to="/comingsoon"
+                  to="/whitepaper"
                 >
                   <li className="list__item">
                     <span className="Section-Title">Whitepapper</span>
@@ -120,7 +132,7 @@ function Roadmap() {
               {
                 <Link
                   className="SectionNavigation-Item Section"
-                  to="/comingsoon"
+                  to="/marketplace"
                 >
                   <li className="list__item">
                     <span className="Section-Title">Marketplace</span>
@@ -137,14 +149,32 @@ function Roadmap() {
               }
             </ul>
           </div>
-          <div
-            className={"menu-burger" + burger_active}
-            onClick={() => {
-              setPoms(poms === "none" ? "block" : "none");
-              setBurgerActive(" menu-burger_active");
-            }}
-          >
-            <img src="./img/burger.png" />
+          <div className="nav-right">
+            {
+              <Link className="SectionNavigation-Item Section" to="/">
+                <img
+                  src="./img/discord_icon.png"
+                  className="nav-right__discord_icon"
+                />
+              </Link>
+            }
+            {
+              <Link className="SectionNavigation-Item Section" to="/">
+                <img
+                  src="./img/twitter_icon.png"
+                  className="nav-right__twitter_icon"
+                />
+              </Link>
+            }
+            <div
+              className={"menu-burger" + burger_active}
+              onClick={() => {
+                setPoms(poms === "none" ? "block" : "none");
+                setBurgerActive(" menu-burger_active");
+              }}
+            >
+              <img src="./img/burger.png" />
+            </div>
           </div>
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
@@ -160,13 +190,13 @@ function Roadmap() {
             {
               <Link className="SectionNavigation-Item Section" to="/roadmap">
                 <li className="pull-out__item">
-                  <span className="Section-Title">Whitepaper</span>
+                  <span className="Section-Title">Roadmap</span>
                 </li>
               </Link>
             }
 
             {
-              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+              <Link className="SectionNavigation-Item Section" to="/mint">
                 <li className="pull-out__item">
                   <span className="Section-Title">Mint</span>
                 </li>
@@ -174,7 +204,7 @@ function Roadmap() {
             }
 
             {
-              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+              <Link className="SectionNavigation-Item Section" to="/staking">
                 <li className="pull-out__item">
                   <span className="Section-Title">Staking</span>
                 </li>

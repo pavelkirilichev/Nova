@@ -29,7 +29,7 @@ function Home() {
               {
                 <Link
                   className="SectionNavigation-Item Section"
-                  to="/comingsoon"
+                  to="/whitepaper"
                 >
                   <li className="list__item">
                     <span className="Section-Title">Whitepapper</span>
@@ -40,7 +40,7 @@ function Home() {
               {
                 <Link
                   className="SectionNavigation-Item Section"
-                  to="/comingsoon"
+                  to="/marketplace"
                 >
                   <li className="list__item">
                     <span className="Section-Title">Marketplace</span>
@@ -57,14 +57,32 @@ function Home() {
               }
             </ul>
           </div>
-          <div
-            className={"menu-burger" + burger_active}
-            onClick={() => {
-              setPoms(poms === "none" ? "block" : "none");
-              setBurgerActive(" menu-burger_active");
-            }}
-          >
-            <img src="./img/burger.png" />
+          <div className="nav-right">
+            {
+              <Link className="SectionNavigation-Item Section" to="/">
+                <img
+                  src="./img/discord_icon.png"
+                  className="nav-right__discord_icon"
+                />
+              </Link>
+            }
+            {
+              <Link className="SectionNavigation-Item Section" to="/">
+                <img
+                  src="./img/twitter_icon.png"
+                  className="nav-right__twitter_icon"
+                />
+              </Link>
+            }
+            <div
+              className={"menu-burger" + burger_active}
+              onClick={() => {
+                setPoms(poms === "none" ? "block" : "none");
+                setBurgerActive(" menu-burger_active");
+              }}
+            >
+              <img src="./img/burger.png" />
+            </div>
           </div>
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
@@ -80,13 +98,13 @@ function Home() {
             {
               <Link className="SectionNavigation-Item Section" to="/roadmap">
                 <li className="pull-out__item">
-                  <span className="Section-Title">Whitepaper</span>
+                  <span className="Section-Title">Roadmap</span>
                 </li>
               </Link>
             }
 
             {
-              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+              <Link className="SectionNavigation-Item Section" to="/mint">
                 <li className="pull-out__item">
                   <span className="Section-Title">Mint</span>
                 </li>
@@ -94,7 +112,7 @@ function Home() {
             }
 
             {
-              <Link className="SectionNavigation-Item Section" to="/comingsoon">
+              <Link className="SectionNavigation-Item Section" to="/staking">
                 <li className="pull-out__item">
                   <span className="Section-Title">Staking</span>
                 </li>
