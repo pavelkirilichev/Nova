@@ -1,5 +1,4 @@
 
-
 @font-face {
 	font-family: 'lota_bold'; 
 	src: url(../fonts/lota_bold.otf); 
@@ -11,6 +10,10 @@
 @font-face {
 	font-family: 'lota_white'; 
 	src: url(../fonts/lota_white.otf); 
+}
+@font-face {
+	font-family: 'lota_300'; 
+	src: url(../fonts/lota_300.otf); 
 }
 
 * {

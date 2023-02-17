@@ -3,17 +3,17 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 const text_arr = [
   {
-    text: "Test text",
-    title: "TEST",
+    text: "Automatic mint instruments, which help to buy the most hyped NFTs",
+    title: "NOVAMIND CLI ",
     id: 0,
   },
   {
-    text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL. - Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL. - Mint: Mint 1618",
+    text: "Web3 marketplace. It is based on NM market but will add other projects’ products",
     title: "GUI BOT",
     id: 1,
   },
   {
-    text: "- Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL. - Mint: Mint 1618 Electric Sheep. To protect the mental health of the sheep, we create a new launch style called Double FL. - Mint: Mint 1618 ",
+    text: "The first public Novamind collection of 1000 minders. They will fight for Novamind’s liberty and your profit. Every minder knows the secrets of planet, so they can get discounts for NM tools and find some brass.",
     title: "NFT",
     id: 2,
   },

@@ -1,136 +1,376 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
 function Marketplace() {
-  const [poms, setPoms] = useState("none");
-  const [burger_active, setBurgerActive] = useState("");
-  const [main_opacity, setMainOpacity] = useState("");
-
-  setInterval(() => {
-    setMainOpacity(" main-opacity");
-  }, 1);
-
   return (
     <div className="wrapper">
-      <header className="header">
-        <nav className="nav">
-          <div className="nav-left">
-            <img src="./img/logo.png" className="logo" />
-            <ul className="nav__list">
-              {
-                <Link className="SectionNavigation-Item Section" to="/">
-                  <li className="list__item">
-                    <span className="Section-Title">Home</span>
-                  </li>
-                </Link>
-              }
-
-              {
-                <Link
-                  className="SectionNavigation-Item Section"
-                  to="/whitepaper"
-                >
-                  <li className="list__item">
-                    <span className="Section-Title">Whitepapper</span>
-                  </li>
-                </Link>
-              }
-
-              {
-                <Link
-                  className="SectionNavigation-Item Section"
-                  to="/marketplace"
-                >
-                  <li className="list__item bg-light">
-                    <span className="Section-Title">Marketplace</span>
-                  </li>
-                </Link>
-              }
-
-              {
-                <Link className="SectionNavigation-Item Section" to="/faq">
-                  <li className="list__item">
-                    <span className="Section-Title">FAQ</span>
-                  </li>
-                </Link>
-              }
-            </ul>
-          </div>
-          <div className="nav-right">
-            {
-              <Link className="SectionNavigation-Item Section" to="/">
-                <img
-                  src="./img/discord_icon.png"
-                  className="nav-right__discord_icon"
-                />
-              </Link>
-            }
-            {
-              <Link className="SectionNavigation-Item Section" to="/">
-                <img
-                  src="./img/twitter_icon.png"
-                  className="nav-right__twitter_icon"
-                />
-              </Link>
-            }
-            <div
-              className={"menu-burger" + burger_active}
-              onClick={() => {
-                setPoms(poms === "none" ? "block" : "none");
-                setBurgerActive(" menu-burger_active");
-              }}
-            >
-              <img src="./img/burger.png" />
-            </div>
-          </div>
-        </nav>
-        <div className="pull-out__menu" style={{ display: poms }}>
-          <ul className="pull-out__list">
-            {
-              <Link className="SectionNavigation-Item Section" to="/tokenomics">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Tokenomics</span>
-                </li>
-              </Link>
-            }
-
-            {
-              <Link className="SectionNavigation-Item Section" to="/roadmap">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Roadmap</span>
-                </li>
-              </Link>
-            }
-
-            {
-              <Link className="SectionNavigation-Item Section" to="/mint">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Mint</span>
-                </li>
-              </Link>
-            }
-
-            {
-              <Link className="SectionNavigation-Item Section" to="/staking">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Staking</span>
-                </li>
-              </Link>
-            }
+      <div className="mp__main">
+        <div className="mp__sidebar__left">
+          <img src="./img/marketplace/logo.png" className="mp__sidebar__logo" />
+          <ul className="mp__sidebar__left__list">
+            <li className="mp__sidebar__left__item">
+              <div className="mp__sidebar__left__item__inner">
+                <span className="mp__sidebar__left__item__text">
+                  Marketplase
+                </span>
+                <div className="mp__sidebar__left__item__border-active"></div>
+              </div>
+            </li>
+            <li className="mp__sidebar__left__item">
+              <div className="mp__sidebar__left__item__inner">
+                <span className="mp__sidebar__left__item__text">Vendors</span>
+                <div className="mp__sidebar__left__item__border"></div>
+              </div>
+            </li>
+            <li className="mp__sidebar__left__item">
+              <div className="mp__sidebar__left__item__inner">
+                <span className="mp__sidebar__left__item__text">Support</span>
+                <div className="mp__sidebar__left__item__border"></div>
+              </div>
+            </li>
           </ul>
         </div>
-      </header>
-      <main
-        className={"main" + main_opacity}
-        onClick={() => {
-          setPoms("none");
-          setBurgerActive("");
-        }}
-      >
-        <div className="title__div">
-          <span className="title__1 coming_soon">COMING SOON</span>
+        <div className="mp__content">
+          <div className="mp__main__container">
+            <div className="mp__banner">
+              <div className="mp__banner__title-div">
+                <span className="mp__banner__title">NOVA MIND</span>
+                <span className="mp__banner__subtitle">MARKET</span>
+              </div>
+              <p className="mp__banner__content">
+                Many many text many many text many text many many text many text
+                many many text many text many many text vany many text many many
+                text many text many many text many text many many text many text
+                many many text many many text many text many many text many text
+                many many text
+              </p>
+            </div>
+            <div className="mp__popular-goods">
+              <span className="mp__popular-goods__title">POPULAR GOODS</span>
+              <ul className="mp__popular-goods__list">
+                <li className="mp__popular-goods__item">
+                  <div className="mp__popular-goods__item__icon">
+                    <img src="./img/marketplace/discord_good.svg" />
+                  </div>
+                  <div className="mp__popular-goods__item__inner">
+                    <div className="mp__popular-goods__item__inner__top">
+                      <span className="mp__popular-goods__item__inner__title">
+                        Discord account
+                      </span>
+                      <p className="mp__popular-goods__item__inner__subtitle">
+                        Discord account email + phone verified
+                      </p>
+                    </div>
+                    <div className="mp__popular-goods__item__inner__bottom">
+                      <span>5$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__popular-goods__item">
+                  <div className="mp__popular-goods__item__icon">
+                    <img src="./img/marketplace/cli.svg" />
+                  </div>
+                  <div className="mp__popular-goods__item__inner">
+                    <div className="mp__popular-goods__item__inner__top">
+                      <span className="mp__popular-goods__item__inner__title">
+                        CLI Bot
+                      </span>
+                      <p className="mp__popular-goods__item__inner__subtitle">
+                        Bot for copping NFT without interface
+                      </p>
+                    </div>
+                    <div className="mp__popular-goods__item__inner__bottom">
+                      <span>10$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__popular-goods__item">
+                  <div className="mp__popular-goods__item__icon">
+                    <img src="./img/marketplace/white_list.svg" />
+                  </div>
+                  <div className="mp__popular-goods__item__inner">
+                    <div className="mp__popular-goods__item__inner__top">
+                      <span className="mp__popular-goods__item__inner__title">
+                        White List
+                      </span>
+                      <p className="mp__popular-goods__item__inner__subtitle">
+                        White List for partners or stuff
+                      </p>
+                    </div>
+                    <div className="mp__popular-goods__item__inner__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__popular-goods__item">
+                  <div className="mp__popular-goods__item__icon">
+                    <img src="./img/marketplace/art.svg" />
+                  </div>
+                  <div className="mp__popular-goods__item__inner">
+                    <div className="mp__popular-goods__item__inner__top">
+                      <span className="mp__popular-goods__item__inner__title">
+                        Art
+                      </span>
+                      <p className="mp__popular-goods__item__inner__subtitle">
+                        CG or hand draw art
+                      </p>
+                    </div>
+                    <div className="mp__popular-goods__item__inner__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__popular-goods__item">
+                  <div className="mp__popular-goods__item__icon">
+                    <img src="./img/marketplace/board.svg" />
+                  </div>
+                  <div className="mp__popular-goods__item__inner">
+                    <div className="mp__popular-goods__item__inner__top">
+                      <span className="mp__popular-goods__item__inner__title">
+                        Tracking bot
+                      </span>
+                      <p className="mp__popular-goods__item__inner__subtitle">
+                        Collection tracking bot
+                      </p>
+                    </div>
+                    <div className="mp__popular-goods__item__inner__bottom">
+                      <span>8$Mind</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="mp__goods">
+              <span className="mp__goods__title">GOODS</span>
+              <ul className="mp__goods__list">
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/discord_plus.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Discord account
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Discord account email + phone verified
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>5$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/discord_good_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Discord account
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Discord account email verified
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/cli_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        CLI Bot
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Bot for copping NFT without interface
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>10$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/gui.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        GUI Bot
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Bot for copping NFT with interface
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>15$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/token_board.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Token tracking bot
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Tracking bot for token
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/dollar_board.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Listing alerts
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Sales/Listing alerts
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/board_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Tracking bot
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Collection tracking bot
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>8$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/white_list_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        White list
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        White list from partner or stuff
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/art_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">Art</span>
+                      <p className="mp__goods__item__info__subtitle">
+                        CG or hand drw art
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/discord_good_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Discord account
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Discord account email + phone verified
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/twitter_good_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Discord account
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Discord account email + phone verified
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+                <li className="mp__goods__item">
+                  <div className="mp__goods__item__inner">
+                    <div className="mp__goods__item__image">
+                      <img src="./img/marketplace/mail_good_big.svg" />
+                    </div>
+                    <div className="mp__goods__item__inner__info">
+                      <span className="mp__goods__item__info__title">
+                        Discord account
+                      </span>
+                      <p className="mp__goods__item__info__subtitle">
+                        Discord account email + phone verified
+                      </p>
+                    </div>
+                    <div className="mp__goods__item__info__bottom">
+                      <span>2$Mind</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
+        <div className="mp__sidebar__right">
+          <div className="mp__sidebar__right__btn__list">
+            <div className="mp__sidebar__right__btn__item">
+              <img src="./img/marketplace/discord_icon.png" />
+              <span>Connect discord</span>
+            </div>
+            <div className="mp__sidebar__right__btn__item">
+              <img src="./img/marketplace/wallet_icon.png" />
+              <span>Connect wallet</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -16,7 +16,10 @@ function Home() {
       <header className="header">
         <nav className="nav">
           <div className="nav-left">
-            <img src="./img/logo.png" className="logo" />
+            <Link to="/" style={{ height: 24 }}>
+              <img src="./img/logo.png" className="logo" />
+            </Link>
+
             <ul className="nav__list">
               {
                 <Link className="SectionNavigation-Item Section" to="/">
@@ -87,22 +90,6 @@ function Home() {
         </nav>
         <div className="pull-out__menu" style={{ display: poms }}>
           <ul className="pull-out__list">
-            {
-              <Link className="SectionNavigation-Item Section" to="/tokenomics">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Tokenomics</span>
-                </li>
-              </Link>
-            }
-
-            {
-              <Link className="SectionNavigation-Item Section" to="/roadmap">
-                <li className="pull-out__item">
-                  <span className="Section-Title">Roadmap</span>
-                </li>
-              </Link>
-            }
-
             {
               <Link className="SectionNavigation-Item Section" to="/mint">
                 <li className="pull-out__item">

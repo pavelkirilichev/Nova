@@ -12,14 +12,14 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/tokenomics" element={<Tokenomics />} />
-        <Route path="/whitepaper" element={<Whitepaper />} />
-        <Route path="/marketplace" element={<Marketplace />} />
-        <Route path="/mint" element={<Coming_soon />} />
-        <Route path="/staking" element={<Coming_soon />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/roadmap" element={<Roadmap />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/tokenomics" element={<Tokenomics />} />
+      <Route path="/whitepaper" element={<Coming_soon />} />
+      <Route path="/marketplace" element={<Coming_soon />} />
+      <Route path="/mint" element={<Coming_soon />} />
+      <Route path="/staking" element={<Coming_soon />} />
     </Routes>
   </BrowserRouter>,
   rootElement

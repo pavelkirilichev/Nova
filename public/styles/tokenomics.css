@@ -26,6 +26,7 @@
 .punct {
     display: flex;
     margin-bottom: 60px;
+    cursor: pointer;
 }
 .line {
     height: 54px;
