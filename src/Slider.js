@@ -9,7 +9,7 @@ const text_arr = [
   },
   {
     text: "Web3 marketplace. It is based on NM market but will add other projects’ products",
-    title: "GUI BOT",
+    title: "MARKETPLACE",
     id: 1,
   },
   {

@@ -1,267 +1,268 @@
-
 @font-face {
-	font-family: 'lota_bold'; 
-	src: url(../fonts/lota_bold.otf); 
+  font-family: "lota_bold";
+  src: url(../fonts/lota_bold.otf);
 }
 @font-face {
-	font-family: 'lota_black'; 
-	src: url(../fonts/lota_black.otf); 
+  font-family: "lota_black";
+  src: url(../fonts/lota_black.otf);
 }
 @font-face {
-	font-family: 'lota_white'; 
-	src: url(../fonts/lota_white.otf); 
+  font-family: "lota_white";
+  src: url(../fonts/lota_white.otf);
 }
 @font-face {
-	font-family: 'lota_300'; 
-	src: url(../fonts/lota_300.otf); 
+  font-family: "lota_300";
+  src: url(../fonts/lota_300.otf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 a {
-    text-decoration:none;
+  text-decoration: none;
 }
 body {
-    background: #06070C;
+  background: #06070c;
 }
 .main {
-    opacity: 0;
-    padding-top: 90px;
+  opacity: 0;
+  padding-top: 90px;
 }
 .main-opacity {
-    opacity: 1;
-    transition: opacity 0.4s;
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
 }
 .nav {
-    width: 100%;
-    height: 50px;
-    background-color: #0E0F18;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background-color: #0e0f18;
+  display: flex;
+  justify-content: space-between;
 }
 .nav-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .nav-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .nav-right__discord_icon {
-    margin-top: 2px;
+  margin-top: 2px;
 }
 .nav-right__twitter_icon {
-    margin-top: 2px;
-    margin-left: 22.71px;
-    margin-right: 10px;
+  margin-top: 2px;
+  margin-left: 22.71px;
+  margin-right: 10px;
 }
 .logo {
-    margin-left: 17px;
-    width: 34px;
-    height: 24px;
+  margin-left: 17px;
+  width: 34px;
+  height: 24px;
 }
 .nav__list {
-    list-style: none;
-    display: flex;
-    margin-left: 16px;
+  list-style: none;
+  display: flex;
+  margin-left: 16px;
 }
 .bg-light {
-    background: #1B1D2C;
+  background: #1b1d2c;
 }
 .list__item {
-    cursor: pointer;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    padding: 0 17px;
-    color: #fff;
-    font-family: 'lota_bold';
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 17px;
+  color: #fff;
+  font-family: "lota_bold";
 }
 .list__item:hover {
-    background: #1B1D2C;
+  background: #1b1d2c;
 }
 
 .menu-burger {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 54px;
-    height: 50px;   
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 50px;
 }
 .menu-burger:hover {
-    background-color: #1B1D2C;
+  background-color: #1b1d2c;
 }
 .menu-burger_active {
-    background-color: #1B1D2C;
+  background-color: #1b1d2c;
 }
 
 .pull-out__menu {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 190px;
-    background: #0E0F19;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 190px;
+  background: #0e0f19;
 }
 .pull-out__list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
 }
 .pull-out__item {
-    cursor: pointer;
-    font-family: 'lota_bold';
-    padding: 13px 0 13px 28px;
-    background: #0E0F19;
-    color: #fff;
-    font-size: 14px;
+  cursor: pointer;
+  font-family: "lota_bold";
+  padding: 13px 0 13px 28px;
+  background: #0e0f19;
+  color: #fff;
+  font-size: 14px;
 }
 .pull-out__item a {
-    color: #fff;
+  color: #fff;
 }
 .pull-out__item:hover {
-    background: #1B1D2C;
+  background: #1b1d2c;
 }
 .title__div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .title__1 {
-    color: #000;
-    font-weight: 900;
-    font-size: 60px;
-    -webkit-text-stroke: 2.75556px #5691B9;
-    font-family: "lota_black";
+  color: #000;
+  font-weight: 900;
+  font-size: 60px;
+  -webkit-text-stroke: 2.75556px #5691b9;
+  font-family: "lota_black";
 }
 .title__2 {
-    margin-top: -18px;
-    font-size: 17.0229px;
-    color: #fff;
-    font-family: "lota_bold";
+  margin-top: -18px;
+  font-size: 17.0229px;
+  color: #fff;
+  font-family: "lota_bold";
 }
 
 .slider {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .slider__main {
-    margin: 0px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1087px;
-    height: 400px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1087px;
+  height: 400px;
 }
 
 .slider__section-center {
-    opacity: 0.01;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 953px;
-    height: 400px;
+  opacity: 0.01;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 953px;
+  height: 400px;
 }
 .slider__section-center-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in;
+  opacity: 1;
+  transition: opacity 300ms ease-in;
 }
 @keyframes ani {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 .slider_img-center {
-    z-index: 2;
-    position: absolute;
+  z-index: 2;
+  position: absolute;
 }
 .slider_img-side {
-    height: 280px;
-    max-width: 475px;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.42);
-    filter: brightness(55%) blur(2px);
+  height: 280px;
+  max-width: 475px;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.42);
+  filter: brightness(55%) blur(2px);
 }
 
-
-
 .slider__side-left {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42.5px;
-    height: 110px;
-    background-image: url(../img/slider_btn-left.png);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42.5px;
+  height: 110px;
+  background-image: url(../img/slider_btn-left.png);
 }
 
 .slider__side-right {
-    z-index: 3;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42.5px;
-    height: 110px;
-    background-image: url(../img/slider_btn-left.png);
+  z-index: 3;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42.5px;
+  height: 110px;
+  background-image: url(../img/slider_btn-left.png);
 }
 .slider__arrow {
-    background-image: url("../img/slider_arrow-left.png");
-    height: 27.61px;
-    width: 17px;
+  background-image: url("../img/slider_arrow-left.png");
+  height: 27.61px;
+  width: 17px;
 }
 
 .slider__text {
-    margin: 12px auto;
-    width: 762px;
-    height: 300px;
-    opacity: 0.01;
+  margin: 12px auto;
+  width: 762px;
+  height: 300px;
+  opacity: 0.01;
 }
 .slider__text-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in;
+  opacity: 1;
+  transition: opacity 300ms ease-in;
 }
 .slider__text-title {
-    color: #000;
-    font-weight: 900;
-    font-size: 33.19px;
-    -webkit-text-stroke: 1.5px #28BFA4;
-    font-family: "lota_black";
+  color: #000;
+  font-weight: 900;
+  font-size: 33.19px;
+  -webkit-text-stroke: 1.5px #28bfa4;
+  font-family: "lota_black";
 }
 .slider__text-main {
-    margin-top: 14px;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 300;
-    line-height: 23px;
+  margin-top: 14px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 23px;
 }
 
 .slider_img-1 {
-    width: 763px;
-    height: 394px;
-    left: 50%;
-    margin-left: -381.5px;
+  width: 763px;
+  height: 394px;
+  left: 50%;
+  margin-left: -381.5px;
 }
 .slider_img-2 {
-    width: 763px;
-    height: 394px;
-    left: 50%;
-    margin-left: -381.5px;
+  width: 542px;
+  height: 394px;
+  left: 50%;
+  margin-left: -271px;
 }
 .slider_img-3 {
-    width: 372px;
-    height: 397px;
-    left: 50%;
-    margin-left: -186px;
-
+  width: 372px;
+  height: 397px;
+  left: 50%;
+  margin-left: -186px;
 }

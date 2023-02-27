@@ -151,7 +151,7 @@ function Roadmap() {
           </div>
           <div className="nav-right">
             {
-              <Link className="SectionNavigation-Item Section" to="/">
+              <Link className="SectionNavigation-Item Section" to="https://discord.gg/NHrePX8Uyc" target="_blank" rel="noopener noreferrer">
                 <img
                   src="./img/discord_icon.png"
                   className="nav-right__discord_icon"
@@ -159,7 +159,7 @@ function Roadmap() {
               </Link>
             }
             {
-              <Link className="SectionNavigation-Item Section" to="/">
+              <Link className="SectionNavigation-Item Section" to="https://twitter.com/novamindnft" target="_blank" rel="noopener noreferrer">
                 <img
                   src="./img/twitter_icon.png"
                   className="nav-right__twitter_icon"
